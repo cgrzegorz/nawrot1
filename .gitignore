@@ -1,0 +1,38 @@
+# Zależności
+/node_modules
+/.pnp
+.pnp.*
+
+# Build Next.js
+/.next/
+/out/
+/build
+
+# Obrazy generowane ze źródeł w `assets/` (npm run images)
+/public/img/
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Zmienne środowiskowe
+.env
+.env.*
+!.env.example
+
+# Logi
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+*.log
+
+# Edytory / systemy plików
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.pem
+
+# Hosting
+.vercel

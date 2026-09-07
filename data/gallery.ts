@@ -1,0 +1,52 @@
+/**
+ * Zdjęcia realizacji przeniesione ze starej galerii (Phoca Gallery).
+ * `id` odpowiada kluczowi w `data/images.json`, `alt` opisuje kadr —
+ * stare zdjęcia nie miały opisów alternatywnych.
+ */
+export type Photo = { id: string; alt: string };
+
+export const gallery: Photo[] = [
+  { id: "galeria/12", alt: "Żuraf samojezdny z rozłożonym wysięgnikiem przy remontowanej wieży kościoła" },
+  { id: "galeria/10", alt: "Praca dźwigu przy elewacji ceglanego kościoła z rozetą" },
+  { id: "galeria/13", alt: "Wysięgnik żurawia wzdłuż ceglanej wieży kościelnej" },
+  { id: "galeria/1485370_sam_0372", alt: "Dwa żurawie podczas prac montażowych przy markecie Leroy Merlin" },
+  { id: "galeria/21", alt: "Rozładunek naczepy dźwigiem przed centrum handlowym Port Łódź" },
+  { id: "galeria/15", alt: "Montaż stalowej wieży kratowej za pomocą żurawia samojezdnego" },
+  { id: "galeria/16", alt: "Podnoszenie kratownicy stalowej na wysokość przez dwa żurawie" },
+  { id: "galeria/17", alt: "Załadunek stalowego zbiornika cylindrycznego na naczepę niskopodwoziową" },
+  { id: "galeria/14", alt: "Żuraw samojezdny z wysuniętym wysięgnikiem na tle hali przemysłowej" },
+  { id: "galeria/1a", alt: "Żuraw i betonomieszarka podczas betonowania na placu budowy" },
+  { id: "galeria/2", alt: "Rozładunek elementu maszyny dźwigiem przed halą produkcyjną" },
+  { id: "galeria/20", alt: "Wysięgnik teleskopowy żurawia widziany od dołu na tle chmur" },
+  { id: "galeria/2a", alt: "Przenoszenie płyty stropowej nad budynkiem mieszkalnym" },
+  { id: "galeria/3", alt: "Przenoszenie kontenera nad terenem zakładu, w tle wózek widłowy" },
+  { id: "galeria/30", alt: "Żuraw samojezdny przy budowie hali z czerwonej cegły" },
+  { id: "galeria/3a", alt: "Żuraw pracujący wewnątrz hali podczas montażu konstrukcji dachu" },
+  { id: "galeria/4", alt: "Podnoszenie ładunku na dach budynku biurowego" },
+  { id: "galeria/4a", alt: "Prace dźwigowe przy budowie hotelu w centrum miasta" },
+  { id: "galeria/5", alt: "Żuraw i koparka podczas prac nad brzegiem zbiornika wodnego" },
+  { id: "galeria/5a", alt: "Montaż słupa energetycznego żurawiem na otwartym terenie" },
+  { id: "galeria/6", alt: "Rozładunek maszyny przemysłowej z platformy transportowej" },
+  { id: "galeria/6353603_bbb", alt: "Montaż konstrukcji masztowej z użyciem żurawia samojezdnego" },
+  { id: "galeria/6353605_ccc", alt: "Widok z góry na plac budowy w mieście podczas pracy dźwigu" },
+  { id: "galeria/6353607_ddd", alt: "Żuraw przy stalowej wieży kratowej o zmierzchu" },
+  { id: "galeria/6a", alt: "Ustawianie betonowego kręgu studziennego przy pracach ziemnych" },
+  { id: "galeria/7", alt: "Rozładunek prefabrykowanych płyt betonowych z naczepy" },
+  { id: "galeria/8", alt: "Montaż betonowej belki nośnej za pomocą żurawia" },
+  { id: "galeria/9", alt: "Montaż płyty elewacyjnej na ścianie hali magazynowej" },
+  { id: "galeria/a", alt: "Żuraw samojezdny na piaszczystym placu budowy" },
+  { id: "galeria/aaa", alt: "Prace dźwigowe przy budowie obiektu handlowego" },
+  { id: "galeria/c", alt: "Podnoszenie palety bloczków budowlanych na wyższą kondygnację" },
+  { id: "galeria/dsc_0006", alt: "Rozładunek zestawu ciężarowego dźwigiem przy drodze dojazdowej" },
+  { id: "galeria/dsc_0012", alt: "Koparko-ładowarka podczas prac ziemnych" },
+  { id: "galeria/dsc_0018", alt: "Koparka podczas prac rozbiórkowych i wywozu gruzu" },
+  { id: "galeria/dsc_0022", alt: "Transport i ustawianie cylindrycznego zbiornika stalowego" },
+  { id: "galeria/dsc_0024", alt: "Wywrotka i koparka podczas robót ziemnych na budowie" },
+  { id: "galeria/dsc_0484", alt: "Żuraw podczas montażu konstrukcji stalowej hali" },
+  { id: "galeria/dsc_0840", alt: "Dwa żurawie samojezdne podczas podnoszenia elementu w terenie otwartym" },
+  { id: "galeria/dsc_0864", alt: "Ustawianie kontenera technicznego przy hali produkcyjnej" },
+  { id: "galeria/dsc_0965", alt: "Prace dźwigowe przy zbiornikach technologicznych zakładu" },
+  { id: "galeria/dsc_0985", alt: "Żuraw i samochód ciężarowy podczas przeładunku" },
+  { id: "galeria/dsc_0986", alt: "Żuraw nad wykopem zabezpieczonym siatką na terenie budowy" },
+  { id: "galeria/11", alt: "Montaż modułu kontenerowego na przygotowanym fundamencie" },
+];

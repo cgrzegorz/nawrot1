@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Dźwigi Nawrot">
+  <rect width="64" height="64" rx="14" fill="#17170f"/>
+  <g stroke="#edb60c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M14 52h36"/>
+    <path d="M20 52V16h30"/>
+    <path d="M20 16 32 8"/>
+    <path d="M42 16v10"/>
+  </g>
+  <rect x="36" y="26" width="12" height="9" rx="2" fill="#edb60c"/>
+</svg>
