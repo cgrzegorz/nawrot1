@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://cgrzegorz.github.io
+Sitemap: https://cgrzegorz.github.io/nawrot1/sitemap.xml
