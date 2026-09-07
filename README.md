@@ -82,11 +82,16 @@ optymalizacji, którego przy eksporcie statycznym nie ma.
 
 ### GitHub Pages (automatyczne)
 
-Każdy push na `main` uruchamia `.github/workflows/deploy.yml`: build statyczny
-i publikacja na <https://cgrzegorz.github.io/nawrot1/>.
+Każdy push na `main` uruchamia `.github/workflows/deploy.yml`: build statyczny,
+a gotowa zawartość `out/` trafia **force-pushem na gałąź `gh-pages`** (zawsze
+jeden commit, żeby historia nie puchła od obrazków). GitHub Pages serwuje tę
+gałąź pod <https://cgrzegorz.github.io/nawrot1/>.
 
 Jednorazowo w repozytorium: **Settings → Pages → Build and deployment →
-Source: GitHub Actions**.
+Source: Deploy from a branch → Branch: `gh-pages` / `(root)`**.
+
+Gałąź `gh-pages` jest generowana — nigdy nie commituj na nią ręcznie, bo
+najbliższy deploy i tak ją nadpisze.
 
 Pages serwuje projekt z podkatalogu, więc build używa `basePath` `/nawrot1`
 (`next.config.ts` + `lib/base.ts`). `next/link` prefiksuje adresy sam; surowe

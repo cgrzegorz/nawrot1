@@ -1,4 +1,6 @@
-# Build statyczny Next.js -> GitHub Pages (https://cgrzegorz.github.io/nawrot1/)
+# Build statyczny Next.js -> gałąź `gh-pages`, którą serwuje GitHub Pages
+# (Settings -> Pages -> Source: Deploy from a branch -> gh-pages / (root)).
+# Adres: https://cgrzegorz.github.io/nawrot1/
 name: Deploy to GitHub Pages
 
 on:
@@ -6,10 +8,9 @@ on:
     branches: [main]
   workflow_dispatch:
 
+# Zapis potrzebny, bo workflow sam wypycha commit na `gh-pages`.
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 # Jedno wdrożenie naraz; nie przerywamy trwającego.
 concurrency:
@@ -17,7 +18,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     env:
       NEXT_PUBLIC_BASE_PATH: /nawrot1
@@ -38,18 +39,16 @@ jobs:
       # Bez tego GitHub Pages pomija katalog `_next/` (Jekyll ignoruje `_*`).
       - run: touch out/.nojekyll
 
-      - uses: actions/configure-pages@v5
-
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: out
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+      # Świeże repo w `out/` i force-push: gałąź `gh-pages` ma zawsze
+      # dokładnie jeden commit, więc historia nie puchnie od obrazków.
+      - name: Publikacja na gałęzi gh-pages
+        working-directory: out
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git init -q -b gh-pages
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Deploy ${GITHUB_SHA}"
+          git push -q -f "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" gh-pages
